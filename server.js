@@ -19,6 +19,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.ht
 app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'public', 'about.html')));
 app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'public', 'contact.html')));
 app.get('/services', (req, res) => res.sendFile(path.join(__dirname, 'public', 'services.html')));
+app.get('/projects', (req, res) => res.sendFile(path.join(__dirname, 'public', 'projects.html')));
 
 // Contact form submission route
 app.post('/api/contact', async (req, res) => {
