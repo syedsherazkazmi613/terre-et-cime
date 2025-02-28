@@ -2,8 +2,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build:css": "postcss src/input.css  -o public/output.css",
-    "watch:css": "postcss src/input.css  -o public/output.css --watch"
+    "build:css": "postcss src/input.css -o public/output.css",
+    "watch:css": "postcss src/input.css -o public/output.css --watch",
+    "setup": "npm install && cp .env.example .env"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
