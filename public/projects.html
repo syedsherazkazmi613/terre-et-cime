@@ -1,0 +1,265 @@
+<html>
+<head>
+    <title>Terre et Cime</title>
+    <link rel="icon" type="image/x-icon" href="./images/Logo_Terre_et_Cime_paysage_01_Plan_de_travail_1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+</head>
+<body class="bg-green-50">
+    <header class="w-full bg-white shadow-md py-2 font-sans">
+        <div class="container mx-auto px-4 flex justify-around items-center">
+            <div class="hidden md:flex flex-1 justify-center items-center">
+                <img src="./images/Logo_Terre_et_Cime_paysage_01_Plan_de_travail_1-removebg-preview.png" alt="Terre et Cime" class="h-12 md:h-16">
+            </div>
+            <div class="flex-1 flex justify-around items-center gap-2 md:gap-4 border-x border-gray-200 py-0.5">
+                <div class="flex items-center gap-2">
+                    <div class="bg-green-600 p-2 px-3 md:px-4 rounded-full w-8 md:w-10 h-8 md:h-10 flex items-center justify-center">
+                        <i class="fas fa-phone text-white text-sm md:text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-gray-600 text-[8px] md:text-[10px] font-light">Téléphone</p>
+                        <p class="font-medium text-[8px] md:text-[10px] font-display">06 29 33 51 98</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="bg-green-600 p-2 px-3 md:px-4 rounded-full w-8 md:w-10 h-8 md:h-10 flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-white text-sm md:text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-gray-600 text-[8px] md:text-[10px] font-light">Localisation</p>
+                        <p class="font-medium text-[8px] md:text-[10px] font-display">Paris, France</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block flex-1 text-center">
+                <p class="text-gray-600 font-light text-sm md:text-base">Heures d'ouverture:</p>
+                <p class="font-display font-medium text-sm md:text-base">Lun-Ven: 9h - 18h</p>
+            </div>
+        </div>
+    </header>
+   <nav class="fixed top-11 md:top-16 left-1/2 transform -translate-x-1/2 w-11/12 md:w-4/5 bg-green-600 shadow-lg rounded-full px-4 md:px-6 py-1 flex items-center justify-between z-50 transition-all duration-300">
+        <div class="flex items-center">
+            <img src="./images/Logo Terre et Cime paysage 01 Plan de travail 1.png" alt="Terre et Cime" class="rounded-full h-12 md:h-16">
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-white relative group">
+                <span class="group-hover:text-black transition-colors duration-300">Accueil</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:w-full"></span>
+            </a>
+            <a href="/about" class="text-white relative group">
+                <span class="group-hover:text-black transition-colors duration-300">À propos</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:w-full"></span>
+            </a>
+            <a href="/services" class="text-white relative group">
+                <span class="group-hover:text-black transition-colors duration-300">Nos Services</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:w-full"></span>
+            </a>
+            <a href="/projects" class="text-white font-bold relative group">
+                <span class="group-hover:text-black transition-colors duration-300">Projets</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:w-full"></span>
+            </a>
+            <a href="/contact" class="text-white relative group">
+                <span class="group-hover:text-black transition-colors duration-300">Contact</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:w-full"></span>
+            </a>
+        </div>
+
+        <button onclick="window.location.href='/contact'" class="hidden md:block bg-white text-green-600 px-6 py-2 rounded-full hover:bg-green-100 transition duration-300">
+            Commencer
+        </button>
+        <!-- Mobile menu button -->
+        <button class="md:hidden relative w-10 h-10 focus:outline-none group" onclick="toggleMobileMenu()" id="menuBtn">
+            <div class="absolute w-6 h-0.5 bg-white transform transition-all duration-500 ease-in-out -translate-x-1/2 left-1/2 group-hover:bg-green-200" 
+                style="top: 35%;" id="line1"></div>
+            <div class="absolute w-6 h-0.5 bg-white transform transition-all duration-500 ease-in-out -translate-x-1/2 left-1/2 group-hover:bg-green-200" 
+                style="top: 50%;" id="line2"></div>
+            <div class="absolute w-6 h-0.5 bg-white transform transition-all duration-500 ease-in-out -translate-x-1/2 left-1/2 group-hover:bg-green-200" 
+                style="top: 65%;" id="line3"></div>
+            <div class="absolute inset-0 bg-white/10 rounded-full scale-0 transition-transform duration-500 ease-in-out group-hover:scale-100"></div>
+        </button>
+        <script>
+            const menuBtn = document.getElementById('menuBtn');
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+            
+            menuBtn.addEventListener('click', () => {
+                if (menuBtn.classList.contains('active')) {
+                    line1.style.transform = 'translateX(-50%) rotate(0) translate(0)';
+                    line2.style.transform = 'translateX(-50%) scale(1)';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'translateX(-50%) rotate(0) translate(0)';
+                    menuBtn.classList.remove('active');
+                } else {
+                    line1.style.transform = 'translateX(-50%) rotate(45deg) translate(5px, 5px)';
+                    line2.style.transform = 'translateX(-50%) scale(0)';
+                    line2.style.opacity = '0';
+                    line3.style.transform = 'translateX(-50%) rotate(-45deg) translate(5px, -5px)';
+                    menuBtn.classList.add('active');
+                }
+            });
+        </script>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden fixed top-[5.3rem] md:top-[5.5rem] left-0 right-0 bg-white shadow-lg z-40 md:hidden">
+        <div class="px-4 py-3 space-y-3">
+            <a href="/" class="block text-gray-600 hover:text-green-600 py-2">Accueil</a>
+            <a href="/about" class="block text-gray-600 hover:text-green-600 py-2">À propos</a>
+            <a href="/services" class="block text-gray-600 hover:text-green-600 py-2">Nos Services</a>
+            <a href="/projects" class="block text-gray-600 hover:text-green-600 py-2">Projets</a>
+            <a href="/contact" class="block text-gray-600 hover:text-green-600 py-2">Contact</a>
+        </div>
+    </div>
+   
+
+
+    <section class="py-8 md:py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Nos Réalisations</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/img/a1.jpg" alt="Projet 1" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                    <div class="relative group">
+                        <img src="images/New folder (2)/a1.jpg" alt="Projet 1" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/img/IMG-20250224-WA0062.jpg" alt="Projet 2" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0055.jpg" alt="Projet 2" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0027.jpg" alt="Projet 3" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0028.jpg" alt="Projet 3" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/New folder (2)/a2.jpg" alt="Projet 4" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>      
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0030.jpg" alt="Projet 4" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0031.jpg" alt="Projet 5" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0054.jpg" alt="Projet 5" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="space-y-4">
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0033.jpg" alt="Projet 6" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                    <div class="relative group">
+                        <img src="images/New folder (2)/IMG-20250223-WA0035.jpg" alt="Projet 6" class="w-full h-[300px] object-cover rounded-lg shadow-lg transition duration-300 group-hover:opacity-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 py-16 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Company Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="/images/Logo_Terre_et_Cime_paysage_01_Plan_de_travail_1-removebg-preview.png" alt="Terre et Cime Logo" class="w-10 h-10">
+                        <h3 class="text-2xl font-bold text-white">Terre et Cime</h3>
+                    </div>
+                    <p class="text-gray-200 leading-relaxed">Créateurs de jardins enchanteurs et d'espaces naturels qui s'épanouissent au fil des saisons. Nous donnons vie à vos rêves de verdure.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-200 hover:text-green-400 transition-colors">
+                            <i class="fas fa-leaf text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-200 hover:text-green-400 transition-colors">
+                            <i class="fas fa-tree text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-200 hover:text-green-400 transition-colors">
+                            <i class="fas fa-seedling text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Garden Links -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-semibold flex items-center gap-2">
+                        <i class="fas fa-flower text-green-400"></i>
+                        Découvrez Nos Jardins
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about" class="text-gray-200 hover:text-green-400 transition-colors flex items-center gap-2"><i class="fas fa-seedling text-sm"></i>Notre Histoire</a></li>
+                        <li><a href="/services" class="text-gray-200 hover:text-green-400 transition-colors flex items-center gap-2"><i class="fas fa-spa text-sm"></i>Nos Services</a></li>
+                        <li><a href="/projects" class="text-gray-200 hover:text-green-400 transition-colors flex items-center gap-2"><i class="fas fa-leaf text-sm"></i>Nos Créations</a></li>
+                        <li><a href="/contact" class="text-gray-200 hover:text-green-400 transition-colors flex items-center gap-2"><i class="fas fa-paper-plane text-sm"></i>Nous Contacter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-semibold">Prenez Racine Avec Nous</h4>
+                    <ul class="space-y-3">
+                        <li class="text-gray-200 flex items-center">
+                            <i class="fas fa-home mr-2 text-green-400"></i>
+                            123 Rue des Jardins Fleuris, Ville
+                        </li>
+                        <li class="text-gray-200 flex items-center">
+                            <i class="fas fa-phone mr-2 text-green-400"></i>
+                            06 29 33 51 98
+                        </li>
+                        <li class="text-gray-200 flex items-center">
+                            <i class="fas fa-clock mr-2 text-green-400"></i>
+                            Du Lundi au Samedi, 8h-19h
+                        </li>
+                    </ul>
+                </div>
+
+            <!-- Bottom Bar with Natural Border -->
+            <div class="mt-12 pt-8 border-t border-white/10" style="border-image: url('/images/vine-border.png') 30 stretch;">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-200 text-sm">&copy; 2025 Terre et Cime. Cultivons ensemble votre jardin idéal.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="terms.html" class="text-gray-200 hover:text-green-400 text-sm transition-colors">Confidentialité</a>
+                        <a href="terms.html" class="text-gray-200 hover:text-green-400 text-sm transition-colors">Conditions</a>
+                        <a href="terms.html" class="text-gray-200 hover:text-green-400 text-sm transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

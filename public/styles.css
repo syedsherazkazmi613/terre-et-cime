@@ -1,0 +1,13 @@
+nav {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+    background-color: rgba(22, 163, 74, 0.95) !important; /* green-600 with opacity */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+nav img {
+    transition: height 0.3s ease-in-out;
+} 
